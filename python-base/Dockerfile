@@ -7,7 +7,8 @@ RUN apt-get update --fix-missing \
                           git pciutils unzip ssl-cert \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
+RUN wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim -O /usr/share/vim/vim80/colors/jellybeans.vim
+RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 RUN locale-gen ko_KR.UTF-8
 ENV LANG=ko_KR.UTF-8 LC_ALL=ko_KR.UTF-8
 
@@ -44,6 +45,7 @@ RUN conda config --set ssl_verify no \
 RUN pip install torch torchvision seaborn 
 RUN pip install pydna reportlab
 
+
 #RUN conda config --set ssl_verify no \
 #    && source activate \
 #    && conda config --add channels bioconda \
@@ -62,6 +64,10 @@ RUN echo "alias ll='ls -al'" >> ~/.bashrc
 RUN echo "export LS_COLORS=\"di=00;36:fi=00;37\"" >> ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
 
+RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/. fzf
+RUN ~/.fzf/install
+
+COPY python.vim /root/.vim/syntax/python.vim
 COPY vimrc /root/.vimrc
 
 WORKDIR /home/python/dev
