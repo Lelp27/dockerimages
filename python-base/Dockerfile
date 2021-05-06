@@ -64,8 +64,6 @@ RUN echo "alias ll='ls -al'" >> ~/.bashrc
 RUN echo "export LS_COLORS=\"di=00;36:fi=00;37\"" >> ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
 
-RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/. fzf
-RUN ~/.fzf/install
 
 COPY python.vim /root/.vim/syntax/python.vim
 COPY vimrc /root/.vimrc
