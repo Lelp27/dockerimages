@@ -25,7 +25,6 @@ set softtabstop=4
 set expandtab
 set ruler
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-set termguicolors
 set paste
 set encoding=utf-8
 

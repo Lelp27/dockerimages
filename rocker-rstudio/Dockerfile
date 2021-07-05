@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.0.4
+FROM rocker/rstudio:4.0.5
 
 RUN apt-get update 
 RUN apt-get install -y liblzma-dev libbz2-dev 

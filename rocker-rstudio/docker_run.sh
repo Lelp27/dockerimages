@@ -1,9 +1,7 @@
 #!/bin/bash
-sudo docker run -d --rm \
-	-p 8787:8787 \
-	-v /home/haseong/:/home/rstudio/ \
-	--name rstudio-server \
-	haseong/rocker-rstudio:v0.4
-	#haseong/rstudio-server-run:v02
 
-
+docker run --rm -it \
+	-user root -e PASSWORD=wlq45503 \
+	-p 5222:8787 -v kun:/home/kun \
+	-v SeqDB:/home/seq -w /home/kun \
+	tjdrns27/rstudio-server:v0.3

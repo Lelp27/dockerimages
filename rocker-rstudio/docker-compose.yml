@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+    app:
+        image:haseong/python-base:kun
+        command: /bin/bash
+        ports:
+            - 8888:8888
+        working_dir: /home/kun
+        volumes:
+            - task:/home/kun
