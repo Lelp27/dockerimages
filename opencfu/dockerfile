@@ -1,0 +1,10 @@
+FROM biocontainers/biocontainers:v1.2.0_cv1
+
+RUN apt update
+RUN apt-get install -y vim
+
+RUN echo alias ls -al='ll' >> ~/.bashrc
+RUN export LS_COLORS="di=00;36:fi=00;37" >> ~/.bashrc
+
+
+
