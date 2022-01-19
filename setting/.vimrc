@@ -8,7 +8,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set ruler
-set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 set paste
 set encoding=utf-8
 set mouse=a
