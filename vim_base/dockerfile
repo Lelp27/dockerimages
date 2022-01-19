@@ -1,7 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update
-RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/source.list
+RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 RUN apt-get update --fix-missing \
 	&& apt-get install -y vim-gtk3
 
