@@ -7,7 +7,7 @@ RUN apt-get update --fix-missing \
                           git pciutils unzip ssl-cert \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-RUN wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim -O /usr/share/vim/vim80/colors/jellybeans.vim
+
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 RUN locale-gen ko_KR.UTF-8
 ENV LANG=ko_KR.UTF-8 LC_ALL=ko_KR.UTF-8
