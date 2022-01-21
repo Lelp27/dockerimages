@@ -1,7 +1,24 @@
 # Collection of docker images for SBLab at KRIBB
 
+## Vim_base
+
+From Ubuntu:20.04
+
+The basement image for python, vim scripting.
+with fisa-vim installed plugin for python.
+
+## ont_base
+
+From Vim_base:v0.2
+
+with python-vim environment
+install tools for Nanopore drived sequence handling tools
+
+ | program = pysam, samtools, minimap2, medaka, nanopack
+
 ## python-base
-Ubuntu environment for python development. If you require any additional packages, add a line of "RUN conda install [package name]" before the cleanning command at the end of the Dockerfile     
+
+Instead of it, Use Vim_base for python.
 
 ### Build 
 
@@ -13,34 +30,3 @@ You can change the [ID/name:tag] as you like. The build process will take around
 ```
 docker pull haseong/python-base:v0.1
 ```
-
-OR run the following batch file in Powershell
-
-```
-docker_build.bat 
-```
-
-
-
-
-
-### Execution
-
-```
-docker run --rm -it --name python-base -v c:/mydocs/2021/dev:/home/python/dev haseong/python-base:0.1 /bin/bash    
-```
-
-According to your environment, you can change the directory [c:/mydocs/2021/dev:/home/python/dev] which is [directory of your local machine:directory in the container]   
-
-OR run the following file in Powershell
-
-```
-docker_run.bat
-```
-
-This script enables to access jupyter-lab directly via web browser with 8888 port. Type "http://localhost:8888" in Chrome
-
-
-
-
-
