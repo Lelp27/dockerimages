@@ -12,9 +12,6 @@ RUN pip3 install --user pynvim flake8 pylint isort
 RUN pip3 install --user -I jedi
 RUN wget https://raw.githubusercontent.com/Lelp27/dockerimages/main/setting/fisa_vim.vimrc -O /root/.vimrc
 
-## Python library
-RUN pip3 install --user pandas matplotlib pysam
-
 # clean
 RUN apt-get update \
     && apt-get autoremove -y \

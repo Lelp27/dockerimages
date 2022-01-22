@@ -6,8 +6,10 @@
 " and use a font from https://github.com/ryanoasis/nerd-fonts in your terminal
 " (if you aren't using one of those fonts, you will see funny characters here.
 " Turst me, they look nice when using one of those fonts).
-let fancy_symbols_enabled = 0
 
+set ff=unix
+let fancy_symbols_enabled = 0
+map <C-W> <c-w>w
 
 set encoding=utf-8
 let using_neovim = has('nvim')
@@ -426,6 +428,7 @@ endif
 let g:airline_powerline_fonts = 0
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 " Fancy Symbols!!
 

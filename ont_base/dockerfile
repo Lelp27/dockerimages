@@ -19,10 +19,9 @@ RUN conda config --set auto_activate_base false \
 
 RUN conda install -c bioconda minimap2
 RUN conda install -c bioconda samtools
-RUN pip3 install --user pylint pynvim
+## write own librarys for python
+RUN pip3 install --user pylint pynvim pandas pysam matplotlib
 RUN conda update --all
-
-RUN echo "alias python='python3.8'"
 
 # clean
 RUN apt-get autoremove -y \
