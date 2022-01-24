@@ -1,8 +1,5 @@
 FROM tjdrns27/vim:v0.2
 
-## pip module install
-RUN pip install pysam nanopack medaka
-
 ## conda installation
 RUN curl -sSLk https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -u -bfp /usr/local
@@ -20,7 +17,7 @@ RUN conda config --set auto_activate_base false \
 RUN conda install -c bioconda minimap2
 RUN conda install -c bioconda samtools
 ## write own librarys for python
-RUN pip3 install --user pylint pynvim pandas pysam matplotlib
+RUN pip3 install --user pylint pynvim pandas pysam matplotlib medaka
 RUN conda update --all
 
 # clean
