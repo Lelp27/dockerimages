@@ -8,7 +8,9 @@
 " Turst me, they look nice when using one of those fonts).
 
 set ff=unix
+set mouse=a
 let fancy_symbols_enabled = 0
+let g:indent_guides_enable_on_vim_startup = 1
 map <C-W> <c-w>w
 
 set encoding=utf-8
@@ -60,7 +62,8 @@ else
     call plug#begin("~/.vim/plugged")
 endif
 
-" Now the actual plugins:
+" Custom plug by kun
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Override configs by directory
 Plug 'arielrossanigo/dir-configs-override.vim'
