@@ -130,12 +130,6 @@ Plug 'mhinz/vim-signify'
 Plug 'vim-scripts/YankRing.vim'
 " Linters
 Plug 'neomake/neomake'
-" Relative numbering of lines (0 is the current line)
-" (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative
-" numbering every time you go to normal mode. Author refuses to add a setting
-" to avoid that)
-Plug 'myusuf3/numbers.vim'
 " Nice icons in the file explorer and file type status line.
 Plug 'ryanoasis/vim-devicons'
 
